@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+body{
+    background-color: black;
+}
+
+
+.quote-box{
+    background-color:rgb(241, 241, 241);
+    width:700px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:40px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'poppins',sans-serif;
+
+    -webkit-box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+-moz-box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+
+}
+.quote-box h2{
+    position: relative;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+.quote-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    position: absolute;
+    background: cyan;
+    bottom:-10px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.quote-box button{
+    width:90px;
+    margin-top: 20px;
+    height:50px;
+    border-radius: 10px;
+    font-family: 'poppins',sans-serif;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+    -webkit-box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+-moz-box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+}
+.info-text{
+        width:150px;
+        border:2px solid purple;
+        height:30px;
+        margin-bottom: 15px;
+        font-family: 'poppins',sans-serif;
+        border-radius: 15px;
+        padding:5px;
+        text-align: center;   
+     /* box-shadow: 10px 6px 61px -5px rgb(7, 147, 234); */
+    
+}
+.city{
+    background-color: black;
+    color:white;
+    width:fit-content;
+    padding:4px;
+    margin-left: 290px;
+    margin-top: 2px;
+    font-size:larger;
+    font-weight: 700;
+}
+.numb{
+    font-weight: 700;
+    font-size: 25px;
+}
+@media screen and (max-width:350px)
+{ 
+    body{
+        overflow: auto;
+    }
+    .quote-box{
+        margin-top: -10px;
+        width:190px;
+        font-size: 30px;
+        height:500px;
+    }
+    .quote-box p{
+        font-size: x-small;
+    }
+    .quote-box h2{
+        margin-top: -10px;
+        font-size: small;
+    }
+    #search-btn{
+        margin-top: -150px;
+    }
+    .city{
+        height:30px;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width:500px) and (min-width:350px)
+{
+    
+    .quote-box{
+        margin-top: -15px;
+        width:240px;
+        font-size:small;
+    }
+    .quote-box h2{
+        font-size: small;
+    }
+    .city{
+        height:30px;
+        font-size: 20px;
+        margin-left: 40px;
+    }
+}
+@media screen and (max-width:700px) and (min-width:500px){
+ .quote-box{
+    width:380px;
+    
+ }
+ .city{
+    height:30px;
+    font-size: 20px;
+    margin-left: 130px;
+}
+}
+
+
+@media screen and (max-width:917px) and (min-width:700px){
+.quote-box{
+    width:400px;
+}
+.city{
+    height:30px;
+    font-size: 20px;
+    margin-left: 130px;
+}
+
+}

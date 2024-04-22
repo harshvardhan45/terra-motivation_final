@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra | Weather</title>
+    <link rel="icon" href="bb.png">
+    <link rel="stylesheet" href="eat.css">
+</head>
+<body>
+    <div class="quote-box">
+        <h2>Weather app</h2>
+        <p>enter valid city name </p>
+        <div class="info-tet">
+            <input type="text" id="inp" class="info-text" placeholder="type city here">
+        <br>
+        <img src="cloudy.jpg" class="icon" alt="">
+        <br>
+        <span class="numb">13 deg C</span>
+        </div>
+        <br>
+        <div class="city">
+            📌delhi,India
+        </div>
+        <br>
+        <div class="ramram">
+       <button id="search-btn"> Get updates</button></div>
+    </div>
+    <div id="result"></div>
+    <script>
+        const apiKey="773f536e040fbbd0e82702aed4dd792a";
+        const apiurl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+       
+        const searchb= document.querySelector(".info-tet input");
+        const searchbtn= document.querySelector(".ramram button" );
+       const iconn= document.querySelector(".icon");
+        async function check(city){
+            const response= await fetch(apiurl + city + `&appid=${apiKey}`);
+            var data = await response.json();
+            console.log(data);
+            document.querySelector(".city").innerHTML = "📌" + data.name;
+            document.querySelector(".numb").innerHTML = Math.round(data.main.temp) + " deg C";
+        
+        if(data.weather[0].main == "Clouds"){
+            iconn.src="cloudy.jpg";
+        }
+        else if(data.weather[0].main == "Clear"){
+            iconn.src="sunny.jpg";
+        }
+         else if(data.weather[0].main == "Rain"){
+             iconn.src="rain.jpg";
+        }
+        else if(data.weather[0].main == "Drizzle"){
+            iconn.src="rain.jpg";
+        }
+    }
+
+
+
+        searchbtn.addEventListener("click", ()=>{
+            check(searchb.value);
+        })
+        
+    </script>
+    
+</body>
+</html>

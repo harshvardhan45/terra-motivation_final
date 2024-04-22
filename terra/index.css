@@ -1,0 +1,133 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+a h5{
+  color: white;
+  text-decoration: none;
+}
+.logo{
+    height:190px;
+    mix-blend-mode:hard-light;
+    margin-left: 620px;
+}
+body{
+    background-color: black;
+    color:white;
+    font-family: 'poppins',sans-serif;
+    overflow: hidden;
+}
+
+.cards{
+display: flex;
+    }
+.quotes{
+    text-align: center;
+    height:200px;
+    margin-left: 135px;
+    margin-top: 65px;
+    width:300px;
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #0ba9ca, 0 0 30px #0ba9ca,
+      0 0 40px #0ba9ca, 0 0 40px #0ba9ca;
+    -webkit-animation: blink 0.7s infinite alternate;
+    animation: blink 0.7s infinite alternate;
+}
+.quotes h4{
+    padding:10px;
+}
+.button{
+    width:70px;
+    margin-top: 20px;
+    height:40px;
+    border-radius: 10px;
+    font-family: 'poppins',sans-serif;
+    background-color: black;
+    color: white;
+
+    -webkit-box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+-moz-box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+
+}
+
+@-webkit-keyframes blink {
+    100% {
+      box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ba9ca,
+        0 0 70px #0ba9ca, 0 0 80px #0ba9ca;
+    }
+  }
+  
+  @keyframes blink {
+    100% {
+      box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ba9ca,
+        0 0 70px #0ba9ca, 0 0 80px #0ba9ca;
+    }
+  }
+ 
+@media screen and (max-width:350px)
+{
+  body{
+    overflow: auto;
+
+  }
+  .logo{
+    margin-left: 80px;
+    height:120px;
+  }
+  .cards{
+    margin-left: -130px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  a h5{
+    margin-top: 500px;
+  }
+  .quotes{
+    width: 170px;
+    margin-left: 200px;
+  }
+}
+@media screen and (max-width:500px) and (min-width:350px)
+{
+  body{
+  overflow: auto;
+  }
+  .cards{
+    margin-left: -80px;
+    display: flex;
+    flex-direction: column;
+    width:100px;
+  }
+  .logo{
+    margin-left: 100px;
+  }
+}
+@media screen and (max-width:700px) and (min-width:500px){
+  .cards{
+    margin-left: 1px;
+    display: flex;
+    flex-direction: column;
+  }
+  .logo{
+    margin-left: 180px;
+  }
+  body{
+    overflow: auto;
+  }
+}
+@media screen and (max-width:917px) and (min-width:700px){
+.cards{
+  margin-left: -130px;
+}
+.logo{
+  margin-left: 34 0px;
+}
+}
+@media screen and (max-width:1200px) and (min-width:917px){
+  .logo{
+    margin-left: 510px;
+ }
+ .cards{
+  margin-left: -120px;
+ }
+}

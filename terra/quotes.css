@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+body{
+    background-color: black;
+}
+.quote-box{
+    background-color:white;
+    width:700px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:40px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'poppins',sans-serif;
+
+    -webkit-box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+-moz-box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+
+}
+.quote-box h2{
+    position: relative;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+.quote-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    position: absolute;
+    background: cyan;
+    bottom:-10px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.quote-box blockquote{
+    font-size: 26px;
+    min-height: 110px;
+}
+.quote-box blockquote::before , .quote-box blockquote::after{
+    content: '"';
+}
+.quote-box span{
+    display: block;
+    margin-top: 10px;
+    float:right;
+    position: relative;
+}
+
+.quote-box span::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: cyan;
+    position: absolute;
+    top:50%;
+    left:-30px;
+}
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.quote-box button{
+    width:70px;
+    margin-top: 20px;
+    height:40px;
+    border-radius: 10px;
+    font-family: 'poppins',sans-serif;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+    -webkit-box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+-moz-box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+box-shadow: 10px 6px 61px -5px rgba(219,52,219,1);
+}
+/* new button */
+@media screen and (max-width:350px)
+{
+    body{
+        overflow: auto;
+    }
+    .quote-box{
+        width: 200px;
+        font-size: small;
+        height:auto;
+    }
+    .quote-box h2{
+        font-size: small;
+   }
+   .quote-box blockquote{
+    font-size: medium;
+    padding:1px;
+   }
+}
+@media screen and (max-width:500px) and (min-width:350px)
+{
+    .quote-box{
+    width:300px;
+    }
+    .quote-box blockquote{
+    font-size: larger;
+    }
+
+}
+@media screen and (max-width:700px) and (min-width:500px){
+    .quote-box{
+        width:400px;
+        }
+    
+}
+@media screen and (max-width:917px) and (min-width:700px){
+    .quote-box{
+    width: 520px;
+    }
+}
